@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Anshu Wingo AI",
+  "description": "Native Android WebView wrapper for 9K Club with WinGo 1M server-synchronized timer, Room persistence, and modular 12-module statistical & ML analytics architecture.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

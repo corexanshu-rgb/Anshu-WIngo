@@ -1,52 +1,50 @@
 package com.example.ui.theme
 
-import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 
-private val DarkColorScheme =
-  darkColorScheme(primary = Purple80, secondary = PurpleGrey80, tertiary = Pink80)
+private val AnshuLightColorScheme = lightColorScheme(
+    primary = CobaltBlue,
+    onPrimary = PureWhite,
+    primaryContainer = SoftBlueSurface,
+    onPrimaryContainer = DeepRoyalBlue,
+    secondary = BrightAccentBlue,
+    onSecondary = PureWhite,
+    secondaryContainer = SkyTint,
+    onSecondaryContainer = DeepRoyalBlue,
+    tertiary = WinGoViolet,
+    onTertiary = PureWhite,
+    background = PureWhite,
+    onBackground = SlateInk,
+    surface = PureWhite,
+    onSurface = SlateInk,
+    surfaceVariant = IceSurface,
+    onSurfaceVariant = MutedSlate,
+    outline = SubtleBorder,
+    outlineVariant = SubtleBorder,
+    error = StatusError,
+    onError = PureWhite
+)
 
-private val LightColorScheme =
-  lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40,
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
-  )
+private val AnshuShapes = Shapes(
+    small = RoundedCornerShape(10.dp),
+    medium = RoundedCornerShape(16.dp),
+    large = RoundedCornerShape(22.dp)
+)
 
 @Composable
-fun MyApplicationTheme(
-  darkTheme: Boolean = isSystemInDarkTheme(),
-  // Dynamic color is available on Android 12+
-  dynamicColor: Boolean = true,
-  content: @Composable () -> Unit,
+fun AnshuWingoTheme(
+    content: @Composable () -> Unit
 ) {
-  val colorScheme =
-    when {
-      dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-        val context = LocalContext.current
-        if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-      }
-
-      darkTheme -> DarkColorScheme
-      else -> LightColorScheme
-    }
-
-  MaterialTheme(colorScheme = colorScheme, typography = Typography, content = content)
+    // Light theme only by design requirement (pure white background, blue accents, no dark/gold mode)
+    MaterialTheme(
+        colorScheme = AnshuLightColorScheme,
+        typography = AppTypography,
+        shapes = AnshuShapes,
+        content = content
+    )
 }

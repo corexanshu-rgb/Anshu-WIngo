@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Anshu Wingo AI</string>
+    <string name="panel_title_anshu_ai">Anshu AI</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="action_refresh">Refresh website</string>
+    <string name="action_open_analytics">Open analytics</string>
+    <string name="action_back">Navigate back</string>
+    <string name="action_open_ai_panel">Open floating predictor panel</string>
+    <string name="action_minimize_panel">Minimize predictor panel</string>
+    <string name="action_close_expanded_panel">Close predictor panel</string>
+    <string name="action_expand_panel">Toggle expanded panel</string>
+    <string name="tab_prediction">Prediction</string>
+    <string name="tab_analysis">Analysis</string>
+    <string name="tab_history">History</string>
+    <string name="ai_engine_not_installed">AI prediction engine not yet installed.</string>
+    <string name="api_authentication_required">API authentication required.</string>
+    <string name="msg_no_historical_data">No historical data available.</string>
+    <string name="msg_auth_session_unavailable">Authorized API session unavailable.</string>
+    <string name="msg_insufficient_training_data">Insufficient training data.</string>
+    <string name="msg_no_reliable_signal">No reliable statistical signal.</string>
+    <string name="msg_classification_not_verified">Classification rules not verified.</string>
+    <string name="debug_login_status_title">Session Diagnostics (Debug)</string>
+    <string name="action_toggle_debug_panel">Toggle login diagnostic status panel</string>
+    <string name="activation_prompt_question">Have you successfully logged into 9K Club?</string>
+    <string name="action_activate_anshu_ai">Activate Anshu AI</string>
+    <string name="action_not_now">Not now</string>
+    <string name="action_deactivate_anshu_ai">Deactivate Anshu AI</string>
+    <string name="educational_disclaimer">Statistical analysis and educational information only. No automated wagering or betting actions.</string>
 </resources>
